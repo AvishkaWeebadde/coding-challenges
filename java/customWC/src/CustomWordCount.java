@@ -18,6 +18,15 @@ public class CustomWordCount {
         processFile(fileName, countLines, countWords, countCharacters);
     }
 
+    /**
+     * Process the file and print the results
+     * read the file and count the lines, words, and characters
+     * then print the results
+     * @param fileName file to process
+     * @param countLines number of lines
+     * @param countWords number of words
+     * @param countCharacters number of characters
+     */
     private static void processFile(String fileName, boolean countLines, boolean countWords, boolean countCharacters) {
         // read the file and count the lines, words, and characters
         // then print the results
@@ -48,12 +57,22 @@ public class CustomWordCount {
         }
     }
 
+    /**
+     * Count the number of words in the given line
+     * @param line line to count the words
+     * @return number of words in the line
+     */
     private static int countWords(String line) {
         String[] words = line.split("\\s+");
         return words.length;
     }
 
-    // checks if the given flag is present in the args
+    /**
+     * Check if the given array contains the given string
+     * @param args array of strings
+     * @param s string to check
+     * @return true if the array contains the string, false otherwise
+     */
     private static boolean containsFlag(String[] args, String s) {
         for (String arg : args) {
             if (arg.equals(s)) {
